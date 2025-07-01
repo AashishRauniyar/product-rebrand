@@ -4,31 +4,61 @@ import fs from "fs";
 import path from "path";
 
 // Create a connection pool with more detailed configuration
-const pool = mysql.createPool({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  port: process.env.DB_PORT ? parseInt(process.env.DB_PORT) : 3306,
-  database: process.env.DB_NAME,
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0,
-  connectTimeout: 30000,
-  enableKeepAlive: true,
-  keepAliveInitialDelay: 10000,
-  multipleStatements: true,
-  dateStrings: true,
-  timezone: "Z",
-  // Add authentication plugin support
-  authPlugins: {
-    mysql_native_password: () => () => Buffer.alloc(0),
-    caching_sha2_password: () => () => Buffer.alloc(0),
-  },
-  // Enable SSL for better compatibility with cloud databases
-  ssl: process.env.DB_SSL === 'false' ? false : {
-    rejectUnauthorized: false
-  }
-});
+const createConnectionPool = () => {
+  const config = {
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT ? parseInt(process.env.DB_PORT) : 3306,
+    database: process.env.DB_NAME,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0,
+    connectTimeout: 60000, // Increased timeout for cloud databases
+    enableKeepAlive: true,
+    keepAliveInitialDelay: 10000,
+    multipleStatements: true,
+    dateStrings: true,
+    timezone: "Z",
+    // Enable SSL for cloud databases (helps with authentication)
+    ...(process.env.DB_SSL !== 'false' && {
+      ssl: {
+        rejectUnauthorized: false
+      }
+    })
+  };
+
+  return mysql.createPool(config);
+};
+
+const pool = createConnectionPool();
+
+// Create an alternative pool for authentication plugin issues
+const createAlternativePool = () => {
+  const config = {
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT ? parseInt(process.env.DB_PORT) : 3306,
+    database: process.env.DB_NAME,
+    waitForConnections: true,
+    connectionLimit: 5,
+    queueLimit: 0,
+    connectTimeout: 30000,
+    enableKeepAlive: true,
+    keepAliveInitialDelay: 5000,
+    dateStrings: true,
+    timezone: "Z",
+    // Force SSL for cloud databases
+    ssl: {
+      rejectUnauthorized: false
+    }
+  };
+
+  return mysql.createPool(config);
+};
+
+let alternativePool: mysql.Pool | null = null;
 
 // Test the connection with more detailed error handling
 console.log("Database connection configuration:", {
@@ -39,36 +69,35 @@ console.log("Database connection configuration:", {
   hasPassword: !!process.env.DB_PASSWORD,
 });
 
-// Test the connection immediately
-pool
-  .getConnection()
-  .then(async (connection) => {
-    console.log("Database connection successful");
+// Test the connection with fallback mechanism
+const testConnection = async () => {
+  try {
+    console.log("Testing primary database connection...");
+    const connection = await pool.getConnection();
+    
     try {
       // Test the connection with a simple query
       const [result] = await connection.query("SELECT 1 as test");
-      console.log("Test query result:", result);
+      console.log("Primary connection test successful:", result);
 
       // Check if we can access the database
       if (process.env.DB_NAME) {
         await connection.query(`USE ${process.env.DB_NAME}`);
-        console.log(
-          `Successfully connected to database: ${process.env.DB_NAME}`
-        );
+        console.log(`Successfully connected to database: ${process.env.DB_NAME}`);
       }
 
       connection.release();
-      console.log("Connection released successfully");
+      console.log("Primary connection released successfully");
 
       // Initialize database and tables
       await initDatabase();
     } catch (error) {
-      console.error("Error during connection test:", error);
+      connection.release();
+      console.error("Error during primary connection test:", error);
       throw error;
     }
-  })
-  .catch((err) => {
-    console.error("Error connecting to the database:", err);
+  } catch (err: any) {
+    console.error("Primary database connection failed:", err);
     console.error("Connection details:", {
       host: process.env.DB_HOST,
       user: process.env.DB_USER,
@@ -76,37 +105,114 @@ pool
       port: process.env.DB_PORT || 3306,
     });
 
-    // Additional error information
-    if (err.code === "ENOTFOUND") {
-      console.error(
-        "DNS resolution failed. Please check if the hostname is correct and your DNS settings."
-      );
-    } else if (err.code === "ETIMEDOUT") {
-      console.error(
-        "Connection timed out. Please check if the database is accessible and the port is correct."
-      );
-      console.error("Trying to connect to:", {
-        host: process.env.DB_HOST,
-        port: process.env.DB_PORT || 3306,
-        timeout: "30 seconds",
-      });
-      console.error("Possible solutions:");
-      console.error("1. Check if the database host is correct");
-      console.error("2. Try a different port (3306 or 3307)");
-      console.error("3. Check if your IP is whitelisted");
-      console.error("4. Check if the database service is running");
-    } else if (err.code === "ECONNREFUSED") {
-      console.error(
-        "Connection refused. Please check if the database is running and accessible."
-      );
-    } else if (err.code === "ER_ACCESS_DENIED_ERROR") {
-      console.error("Access denied. Please check your username and password.");
-    } else if (err.code === "ER_BAD_DB_ERROR") {
-      console.error(
-        `Database '${process.env.DB_NAME}' does not exist. Please create it first.`
-      );
+    // Check if it's an authentication plugin error
+    if (err.code === "ER_PLUGIN_IS_NOT_LOADED" || err.sqlMessage?.includes("mysql_native_password")) {
+      console.log("Authentication plugin error detected. Trying alternative connection...");
+      
+      try {
+        alternativePool = createAlternativePool();
+        const altConnection = await alternativePool.getConnection();
+        
+        try {
+          const [result] = await altConnection.query("SELECT 1 as test");
+          console.log("Alternative connection successful:", result);
+          
+          if (process.env.DB_NAME) {
+            await altConnection.query(`USE ${process.env.DB_NAME}`);
+            console.log(`Successfully connected to database with alternative method: ${process.env.DB_NAME}`);
+          }
+          
+          altConnection.release();
+          console.log("Alternative connection will be used for database operations");
+          
+          // Initialize database with alternative pool
+          await initDatabaseWithPool(alternativePool);
+        } catch (altError) {
+          altConnection.release();
+          throw altError;
+        }
+      } catch (altErr) {
+        console.error("Alternative connection also failed:", altErr);
+        console.error("Both connection methods failed. Please check:");
+        console.error("1. Database credentials are correct");
+        console.error("2. Database server is accessible");
+        console.error("3. MySQL authentication plugin configuration");
+        throw altErr;
+      }
+    } else {
+      // Handle other connection errors
+      if (err.code === "ENOTFOUND") {
+        console.error("DNS resolution failed. Please check if the hostname is correct and your DNS settings.");
+      } else if (err.code === "ETIMEDOUT") {
+        console.error("Connection timed out. Please check if the database is accessible and the port is correct.");
+      } else if (err.code === "ECONNREFUSED") {
+        console.error("Connection refused. Please check if the database is running and accessible.");
+      } else if (err.code === "ER_ACCESS_DENIED_ERROR") {
+        console.error("Access denied. Please check your username and password.");
+      } else if (err.code === "ER_BAD_DB_ERROR") {
+        console.error(`Database '${process.env.DB_NAME}' does not exist. Please create it first.`);
+      }
+      throw err;
     }
-  });
+  }
+};
+
+// Test the connection immediately
+testConnection();
+
+// Initialize database tables if they don't exist with a specific pool
+export async function initDatabaseWithPool(dbPool: mysql.Pool) {
+  try {
+    console.log("Initializing database with alternative pool...");
+
+    // Create database if it doesn't exist
+    if (process.env.DB_NAME) {
+      await dbPool.query(`CREATE DATABASE IF NOT EXISTS ${process.env.DB_NAME}`);
+      console.log(`Database ${process.env.DB_NAME} created or already exists`);
+
+      // Use the database
+      await dbPool.query(`USE ${process.env.DB_NAME}`);
+      console.log(`Using database ${process.env.DB_NAME}`);
+    }
+
+    // Create users table
+    await dbPool.query(`
+      CREATE TABLE IF NOT EXISTS users (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(255) NOT NULL UNIQUE,
+        password VARCHAR(255) NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      )
+    `);
+    console.log("Users table created or already exists");
+
+    // Check if admin user exists
+    const [users] = await dbPool.query<any[]>(
+      "SELECT * FROM users WHERE username = ?",
+      [process.env.ADMIN_USERNAME]
+    );
+
+    if (!users || users.length === 0) {
+      // Create admin user if it doesn't exist
+      const hashedPassword = await bcrypt.hash(
+        process.env.ADMIN_PASSWORD || "admin123",
+        10
+      );
+      await dbPool.query("INSERT INTO users (username, password) VALUES (?, ?)", [
+        process.env.ADMIN_USERNAME || "admin",
+        hashedPassword,
+      ]);
+      console.log("Admin user created successfully");
+    } else {
+      console.log("Admin user already exists");
+    }
+
+    console.log("Database initialization with alternative pool completed successfully");
+  } catch (error) {
+    console.error("Error initializing database with alternative pool:", error);
+    throw error;
+  }
+}
 
 // Initialize database tables if they don't exist
 export async function initDatabase() {
@@ -209,6 +315,11 @@ export async function dropTables() {
   } finally {
     connection.release();
   }
+}
+
+// Export the appropriate pool based on which one is working
+export function getPool() {
+  return alternativePool || pool;
 }
 
 export default pool;
