@@ -1,0 +1,1762 @@
+{
+	"knownSymbols": {
+		"middleware": [
+			{
+				"name": "middleware",
+				"path": "d:\\Internship\\product-rebrands\\middleware.ts",
+				"type": "function",
+				"isDefault": false
+			}
+		],
+		"config": [
+			{
+				"name": "config",
+				"path": "d:\\Internship\\product-rebrands\\middleware.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"NextResponse": [
+			{
+				"name": "NextResponse",
+				"module": "next/server",
+				"isDefault": false
+			}
+		],
+		"type { NextRequest": [
+			{
+				"name": "type { NextRequest",
+				"module": "next/server",
+				"isDefault": true
+			}
+		],
+		"reducer": [
+			{
+				"name": "reducer",
+				"path": "d:\\Internship\\product-rebrands\\components\\ui\\use-toast.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"React": [
+			{
+				"name": "React",
+				"module": "react",
+				"isDefault": true,
+				"asDefinition": "* as React"
+			}
+		],
+		"useIsMobile": [
+			{
+				"name": "useIsMobile",
+				"path": "d:\\Internship\\product-rebrands\\components\\ui\\use-mobile.tsx",
+				"type": "function",
+				"isDefault": false
+			},
+			{
+				"name": "useIsMobile",
+				"module": "@/hooks/use-mobile",
+				"isDefault": false
+			}
+		],
+		"generateSlug": [
+			{
+				"name": "generateSlug",
+				"path": "d:\\Internship\\product-rebrands\\lib\\utils.ts",
+				"type": "function",
+				"isDefault": false
+			}
+		],
+		"generateProductId": [
+			{
+				"name": "generateProductId",
+				"path": "d:\\Internship\\product-rebrands\\lib\\utils.ts",
+				"type": "function",
+				"isDefault": false
+			}
+		],
+		"ensureDirectoryExists": [
+			{
+				"name": "ensureDirectoryExists",
+				"module": "@/lib/utils",
+				"isDefault": false
+			},
+			{
+				"name": "ensureDirectoryExists",
+				"path": "d:\\Internship\\product-rebrands\\lib\\utils.ts",
+				"type": "function",
+				"isDefault": false
+			}
+		],
+		"async": [
+			{
+				"name": "async",
+				"path": "d:\\Internship\\product-rebrands\\app\\api\\products\\[id]\\ingredients\\route.ts",
+				"isDefault": true
+			}
+		],
+		"validateProduct": [
+			{
+				"name": "validateProduct",
+				"module": "@/lib/utils",
+				"isDefault": false
+			},
+			{
+				"name": "validateProduct",
+				"path": "d:\\Internship\\product-rebrands\\lib\\utils.ts",
+				"type": "function",
+				"isDefault": false
+			}
+		],
+		"validateIngredient": [
+			{
+				"name": "validateIngredient",
+				"module": "@/lib/utils",
+				"isDefault": false
+			},
+			{
+				"name": "validateIngredient",
+				"path": "d:\\Internship\\product-rebrands\\lib\\utils.ts",
+				"type": "function",
+				"isDefault": false
+			}
+		],
+		"validateWhyChoose": [
+			{
+				"name": "validateWhyChoose",
+				"module": "@/lib/utils",
+				"isDefault": false
+			},
+			{
+				"name": "validateWhyChoose",
+				"path": "d:\\Internship\\product-rebrands\\lib\\utils.ts",
+				"type": "function",
+				"isDefault": false
+			}
+		],
+		"cn": [
+			{
+				"name": "cn",
+				"module": "@/lib/utils",
+				"isDefault": false
+			},
+			{
+				"name": "cn",
+				"path": "d:\\Internship\\product-rebrands\\lib\\cn.ts",
+				"type": "function",
+				"isDefault": false
+			}
+		],
+		"clsx": [
+			{
+				"name": "clsx",
+				"module": "clsx",
+				"isDefault": false
+			}
+		],
+		"type ClassValue": [
+			{
+				"name": "type ClassValue",
+				"module": "clsx",
+				"isDefault": false
+			}
+		],
+		"twMerge": [
+			{
+				"name": "twMerge",
+				"module": "tailwind-merge",
+				"isDefault": false
+			}
+		],
+		"sharp": [
+			{
+				"name": "sharp",
+				"module": "sharp",
+				"isDefault": true
+			}
+		],
+		"fs": [
+			{
+				"name": "fs",
+				"module": "fs",
+				"isDefault": true
+			}
+		],
+		"path": [
+			{
+				"name": "path",
+				"module": "path",
+				"isDefault": true
+			}
+		],
+		"randomInt": [
+			{
+				"name": "randomInt",
+				"module": "crypto",
+				"isDefault": false
+			}
+		],
+		"type { Express": [
+			{
+				"name": "type { Express",
+				"module": "express",
+				"isDefault": true
+			}
+		],
+		"pool": [
+			{
+				"name": "pool",
+				"path": "d:\\Internship\\product-rebrands\\lib\\db.ts",
+				"isDefault": true
+			}
+		],
+		"mysql": [
+			{
+				"name": "mysql",
+				"module": "mysql2/promise",
+				"isDefault": true
+			}
+		],
+		"BuyerAlert": [
+			{
+				"name": "BuyerAlert",
+				"module": "@/components/buyer-alert",
+				"isDefault": true
+			},
+			{
+				"name": "BuyerAlert",
+				"path": "d:\\Internship\\product-rebrands\\components\\buyer-alert.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"useState": [
+			{
+				"name": "useState",
+				"module": "react",
+				"isDefault": false
+			}
+		],
+		"useEffect": [
+			{
+				"name": "useEffect",
+				"module": "react",
+				"isDefault": false
+			}
+		],
+		"motion": [
+			{
+				"name": "motion",
+				"module": "framer-motion",
+				"isDefault": false
+			}
+		],
+		"AnimatePresence": [
+			{
+				"name": "AnimatePresence",
+				"module": "framer-motion",
+				"isDefault": false
+			}
+		],
+		"AlertTriangle": [
+			{
+				"name": "AlertTriangle",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"CallToAction": [
+			{
+				"name": "CallToAction",
+				"module": "@/components/call-to-action",
+				"isDefault": true
+			},
+			{
+				"name": "CallToAction",
+				"path": "d:\\Internship\\product-rebrands\\components\\call-to-action.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"Button": [
+			{
+				"name": "Button",
+				"module": "@/components/ui/button",
+				"isDefault": false
+			}
+		],
+		"ArrowRight": [
+			{
+				"name": "ArrowRight",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"Check": [
+			{
+				"name": "Check",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"Image": [
+			{
+				"name": "Image",
+				"module": "next/image",
+				"isDefault": true
+			}
+		],
+		"BuyNotification": [
+			{
+				"name": "BuyNotification",
+				"module": "@/components/buy-notification",
+				"isDefault": true
+			},
+			{
+				"name": "BuyNotification",
+				"path": "d:\\Internship\\product-rebrands\\components\\buy-notification.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"ShoppingBag": [
+			{
+				"name": "ShoppingBag",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"X": [
+			{
+				"name": "X",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"WhyChoose": [
+			{
+				"name": "WhyChoose",
+				"path": "d:\\Internship\\product-rebrands\\lib\\models\\why-choose.ts",
+				"type": "interface",
+				"isDefault": false
+			}
+		],
+		"BenefitsSection": [
+			{
+				"name": "BenefitsSection",
+				"module": "@/components/benefits-section",
+				"isDefault": true
+			},
+			{
+				"name": "BenefitsSection",
+				"path": "d:\\Internship\\product-rebrands\\components\\benefits-section.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"ProductTheme": [
+			{
+				"name": "ProductTheme",
+				"path": "d:\\Internship\\product-rebrands\\lib\\models\\theme.ts",
+				"type": "interface",
+				"isDefault": false
+			}
+		],
+		"defaultTheme": [
+			{
+				"name": "defaultTheme",
+				"module": "@/lib/models/theme",
+				"isDefault": false
+			},
+			{
+				"name": "defaultTheme",
+				"path": "d:\\Internship\\product-rebrands\\lib\\models\\theme.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"Product": [
+			{
+				"name": "Product",
+				"path": "d:\\Internship\\product-rebrands\\lib\\models\\product.ts",
+				"type": "interface",
+				"isDefault": false
+			}
+		],
+		"Ingredient": [
+			{
+				"name": "Ingredient",
+				"path": "d:\\Internship\\product-rebrands\\lib\\models\\ingredient.ts",
+				"type": "interface",
+				"isDefault": false
+			}
+		],
+		"CountdownTimer": [
+			{
+				"name": "CountdownTimer",
+				"path": "d:\\Internship\\product-rebrands\\components\\countdown-timer.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"Clock": [
+			{
+				"name": "Clock",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"AlertCircle": [
+			{
+				"name": "AlertCircle",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"PrivacyPolicy": [
+			{
+				"name": "PrivacyPolicy",
+				"path": "d:\\Internship\\product-rebrands\\app\\privacy-policy\\page.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"Link": [
+			{
+				"name": "Link",
+				"module": "next/link",
+				"isDefault": true
+			}
+		],
+		"ArrowLeft": [
+			{
+				"name": "ArrowLeft",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"ShippingPolicy": [
+			{
+				"name": "ShippingPolicy",
+				"path": "d:\\Internship\\product-rebrands\\app\\shipping-policy\\page.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"Home": [
+			{
+				"name": "Home",
+				"path": "d:\\Internship\\product-rebrands\\app\\page.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"ProductHero": [
+			{
+				"name": "ProductHero",
+				"path": "d:\\Internship\\product-rebrands\\components\\product-hero.tsx",
+				"type": "function",
+				"isDefault": true
+			},
+			{
+				"name": "ProductHero",
+				"module": "@/components/product-hero",
+				"isDefault": true
+			}
+		],
+		"IngredientsSection": [
+			{
+				"name": "IngredientsSection",
+				"path": "d:\\Internship\\product-rebrands\\components\\ingredients-section.tsx",
+				"type": "function",
+				"isDefault": true
+			},
+			{
+				"name": "IngredientsSection",
+				"module": "@/components/ingredients-section",
+				"isDefault": true
+			}
+		],
+		"TestimonialsSection": [
+			{
+				"name": "TestimonialsSection",
+				"path": "d:\\Internship\\product-rebrands\\components\\testimonials-section.tsx",
+				"type": "function",
+				"isDefault": true
+			},
+			{
+				"name": "TestimonialsSection",
+				"module": "@/components/testimonials-section",
+				"isDefault": true
+			}
+		],
+		"StickyOrderButton": [
+			{
+				"name": "StickyOrderButton",
+				"path": "d:\\Internship\\product-rebrands\\components\\sticky-order-button.tsx",
+				"type": "function",
+				"isDefault": true
+			},
+			{
+				"name": "StickyOrderButton",
+				"module": "@/components/sticky-order-button",
+				"isDefault": true
+			}
+		],
+		"CtaBoxes": [
+			{
+				"name": "CtaBoxes",
+				"path": "d:\\Internship\\product-rebrands\\components\\cta-boxes.tsx",
+				"type": "function",
+				"isDefault": true
+			},
+			{
+				"name": "CtaBoxes",
+				"module": "@/components/cta-boxes",
+				"isDefault": true
+			}
+		],
+		"ProductFeatures": [
+			{
+				"name": "ProductFeatures",
+				"path": "d:\\Internship\\product-rebrands\\components\\product-features.tsx",
+				"type": "function",
+				"isDefault": true
+			},
+			{
+				"name": "ProductFeatures",
+				"module": "@/components/product-features",
+				"isDefault": true
+			}
+		],
+		"RenameInfoModal": [
+			{
+				"name": "RenameInfoModal",
+				"path": "d:\\Internship\\product-rebrands\\components\\rename-info-modal.tsx",
+				"type": "function",
+				"isDefault": true
+			},
+			{
+				"name": "RenameInfoModal",
+				"module": "@/components/rename-info-modal",
+				"isDefault": true
+			}
+		],
+		"ThemeNavigation": [
+			{
+				"name": "ThemeNavigation",
+				"path": "d:\\Internship\\product-rebrands\\components\\theme-navigation.tsx",
+				"type": "function",
+				"isDefault": true
+			},
+			{
+				"name": "ThemeNavigation",
+				"module": "@/components/theme-navigation",
+				"isDefault": true
+			}
+		],
+		"NewCta": [
+			{
+				"name": "NewCta",
+				"path": "d:\\Internship\\product-rebrands\\components\\new-cta.tsx",
+				"type": "function",
+				"isDefault": true
+			},
+			{
+				"name": "NewCta",
+				"module": "@/components/new-cta",
+				"isDefault": true
+			}
+		],
+		"Footer": [
+			{
+				"name": "Footer",
+				"path": "d:\\Internship\\product-rebrands\\components\\footer.tsx",
+				"type": "function",
+				"isDefault": true
+			},
+			{
+				"name": "Footer",
+				"module": "@/components/footer",
+				"isDefault": true
+			}
+		],
+		"metadata": [
+			{
+				"name": "metadata",
+				"path": "d:\\Internship\\product-rebrands\\app\\layout.tsx",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"RootLayout": [
+			{
+				"name": "RootLayout",
+				"path": "d:\\Internship\\product-rebrands\\app\\layout.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"type React": [
+			{
+				"name": "type React",
+				"module": "react",
+				"isDefault": true
+			}
+		],
+		"type { Metadata": [
+			{
+				"name": "type { Metadata",
+				"module": "next",
+				"isDefault": true
+			}
+		],
+		"Inter": [
+			{
+				"name": "Inter",
+				"module": "next/font/google",
+				"isDefault": false
+			}
+		],
+		"ThemeProvider": [
+			{
+				"name": "ThemeProvider",
+				"path": "d:\\Internship\\product-rebrands\\components\\theme-provider.tsx",
+				"type": "function",
+				"isDefault": false
+			},
+			{
+				"name": "ThemeProvider",
+				"module": "@/components/theme-provider",
+				"isDefault": false
+			}
+		],
+		"ReturnPolicy": [
+			{
+				"name": "ReturnPolicy",
+				"path": "d:\\Internship\\product-rebrands\\app\\return-policy\\page.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"LightModePage": [
+			{
+				"name": "LightModePage",
+				"path": "d:\\Internship\\product-rebrands\\app\\light\\page.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"ThemeToggle": [
+			{
+				"name": "ThemeToggle",
+				"path": "d:\\Internship\\product-rebrands\\components\\theme-toggle.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"Moon": [
+			{
+				"name": "Moon",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"Sun": [
+			{
+				"name": "Sun",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"useRouter": [
+			{
+				"name": "useRouter",
+				"module": "next/navigation",
+				"isDefault": false
+			}
+		],
+		"useTheme": [
+			{
+				"name": "useTheme",
+				"module": "next-themes",
+				"isDefault": false
+			},
+			{
+				"name": "useTheme",
+				"path": "d:\\Internship\\product-rebrands\\components\\theme-provider.tsx",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"createContext": [
+			{
+				"name": "createContext",
+				"module": "react",
+				"isDefault": false
+			}
+		],
+		"useContext": [
+			{
+				"name": "useContext",
+				"module": "react",
+				"isDefault": false
+			}
+		],
+		"usePathname": [
+			{
+				"name": "usePathname",
+				"module": "next/navigation",
+				"isDefault": false
+			}
+		],
+		"Star": [
+			{
+				"name": "Star",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"Quote": [
+			{
+				"name": "Quote",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"Dashboard": [
+			{
+				"name": "Dashboard",
+				"path": "d:\\Internship\\product-rebrands\\app\\dashboard\\page.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"axios": [
+			{
+				"name": "axios",
+				"module": "axios",
+				"isDefault": true
+			}
+		],
+		"Tabs": [
+			{
+				"name": "Tabs",
+				"module": "@/components/ui/tabs",
+				"isDefault": false
+			}
+		],
+		"TabsContent": [
+			{
+				"name": "TabsContent",
+				"module": "@/components/ui/tabs",
+				"isDefault": false
+			}
+		],
+		"TabsList": [
+			{
+				"name": "TabsList",
+				"module": "@/components/ui/tabs",
+				"isDefault": false
+			}
+		],
+		"TabsTrigger": [
+			{
+				"name": "TabsTrigger",
+				"module": "@/components/ui/tabs",
+				"isDefault": false
+			}
+		],
+		"Card": [
+			{
+				"name": "Card",
+				"module": "@/components/ui/card",
+				"isDefault": false
+			}
+		],
+		"CardContent": [
+			{
+				"name": "CardContent",
+				"module": "@/components/ui/card",
+				"isDefault": false
+			}
+		],
+		"CardDescription": [
+			{
+				"name": "CardDescription",
+				"module": "@/components/ui/card",
+				"isDefault": false
+			}
+		],
+		"CardHeader": [
+			{
+				"name": "CardHeader",
+				"module": "@/components/ui/card",
+				"isDefault": false
+			}
+		],
+		"CardTitle": [
+			{
+				"name": "CardTitle",
+				"module": "@/components/ui/card",
+				"isDefault": false
+			}
+		],
+		"Table": [
+			{
+				"name": "Table",
+				"module": "@/components/ui/table",
+				"isDefault": false
+			}
+		],
+		"TableBody": [
+			{
+				"name": "TableBody",
+				"module": "@/components/ui/table",
+				"isDefault": false
+			}
+		],
+		"TableCell": [
+			{
+				"name": "TableCell",
+				"module": "@/components/ui/table",
+				"isDefault": false
+			}
+		],
+		"TableHead": [
+			{
+				"name": "TableHead",
+				"module": "@/components/ui/table",
+				"isDefault": false
+			}
+		],
+		"TableHeader": [
+			{
+				"name": "TableHeader",
+				"module": "@/components/ui/table",
+				"isDefault": false
+			}
+		],
+		"TableRow": [
+			{
+				"name": "TableRow",
+				"module": "@/components/ui/table",
+				"isDefault": false
+			}
+		],
+		"PlusCircle": [
+			{
+				"name": "PlusCircle",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"BarChart": [
+			{
+				"name": "BarChart",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"Package": [
+			{
+				"name": "Package",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"Eye": [
+			{
+				"name": "Eye",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"ButtonProps": [
+			{
+				"name": "ButtonProps",
+				"module": "@/components/ui/button",
+				"isDefault": false
+			},
+			{
+				"name": "ButtonProps",
+				"path": "d:\\Internship\\product-rebrands\\components\\ui\\button.tsx",
+				"type": "interface",
+				"isDefault": false
+			}
+		],
+		"Slot": [
+			{
+				"name": "Slot",
+				"module": "@radix-ui/react-slot",
+				"isDefault": false
+			}
+		],
+		"cva": [
+			{
+				"name": "cva",
+				"module": "class-variance-authority",
+				"isDefault": false
+			}
+		],
+		"type VariantProps": [
+			{
+				"name": "type VariantProps",
+				"module": "class-variance-authority",
+				"isDefault": false
+			}
+		],
+		"ChevronRight": [
+			{
+				"name": "ChevronRight",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"MoreHorizontal": [
+			{
+				"name": "MoreHorizontal",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"BadgeProps": [
+			{
+				"name": "BadgeProps",
+				"path": "d:\\Internship\\product-rebrands\\components\\ui\\badge.tsx",
+				"type": "interface",
+				"isDefault": false
+			}
+		],
+		"AvatarPrimitive": [
+			{
+				"name": "AvatarPrimitive",
+				"module": "@radix-ui/react-avatar",
+				"isDefault": true,
+				"asDefinition": "* as AvatarPrimitive"
+			}
+		],
+		"CalendarProps": [
+			{
+				"name": "CalendarProps",
+				"path": "d:\\Internship\\product-rebrands\\components\\ui\\calendar.tsx",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"ChevronLeft": [
+			{
+				"name": "ChevronLeft",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"DayPicker": [
+			{
+				"name": "DayPicker",
+				"module": "react-day-picker",
+				"isDefault": false
+			}
+		],
+		"buttonVariants": [
+			{
+				"name": "buttonVariants",
+				"module": "@/components/ui/button",
+				"isDefault": false
+			}
+		],
+		"DarkModePage": [
+			{
+				"name": "DarkModePage",
+				"path": "d:\\Internship\\product-rebrands\\app\\dark\\page.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"AspectRatioPrimitive": [
+			{
+				"name": "AspectRatioPrimitive",
+				"module": "@radix-ui/react-aspect-ratio",
+				"isDefault": true,
+				"asDefinition": "* as AspectRatioPrimitive"
+			}
+		],
+		"type NextRequest": [
+			{
+				"name": "type NextRequest",
+				"module": "next/server",
+				"isDefault": false
+			}
+		],
+		"getProductWithDetails": [
+			{
+				"name": "getProductWithDetails",
+				"module": "@/lib/models/product",
+				"isDefault": false
+			}
+		],
+		"recordVisit": [
+			{
+				"name": "recordVisit",
+				"module": "@/lib/models/product",
+				"isDefault": false
+			}
+		],
+		"notFound": [
+			{
+				"name": "notFound",
+				"module": "next/navigation",
+				"isDefault": false
+			}
+		],
+		"AlertDialogPrimitive": [
+			{
+				"name": "AlertDialogPrimitive",
+				"module": "@radix-ui/react-alert-dialog",
+				"isDefault": true,
+				"asDefinition": "* as AlertDialogPrimitive"
+			}
+		],
+		"AccordionPrimitive": [
+			{
+				"name": "AccordionPrimitive",
+				"module": "@radix-ui/react-accordion",
+				"isDefault": true,
+				"asDefinition": "* as AccordionPrimitive"
+			}
+		],
+		"ChevronDown": [
+			{
+				"name": "ChevronDown",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"ArrowUp": [
+			{
+				"name": "ArrowUp",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"ChartConfig": [
+			{
+				"name": "ChartConfig",
+				"path": "d:\\Internship\\product-rebrands\\components\\ui\\chart.tsx",
+				"type": "type",
+				"isDefault": false
+			}
+		],
+		"RechartsPrimitive": [
+			{
+				"name": "RechartsPrimitive",
+				"module": "recharts",
+				"isDefault": true,
+				"asDefinition": "* as RechartsPrimitive"
+			}
+		],
+		"ProductHeader": [
+			{
+				"name": "ProductHeader",
+				"path": "d:\\Internship\\product-rebrands\\components\\product-header.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"PricingSection": [
+			{
+				"name": "PricingSection",
+				"path": "d:\\Internship\\product-rebrands\\components\\pricing-section.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"Shield": [
+			{
+				"name": "Shield",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"TrendingUp": [
+			{
+				"name": "TrendingUp",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"Award": [
+			{
+				"name": "Award",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"CounterfeitReplacementModal": [
+			{
+				"name": "CounterfeitReplacementModal",
+				"path": "d:\\Internship\\product-rebrands\\components\\counterfeit-replacement-modal.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"Upload": [
+			{
+				"name": "Upload",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"CheckboxPrimitive": [
+			{
+				"name": "CheckboxPrimitive",
+				"module": "@radix-ui/react-checkbox",
+				"isDefault": true,
+				"asDefinition": "* as CheckboxPrimitive"
+			}
+		],
+		"LabelPrimitive": [
+			{
+				"name": "LabelPrimitive",
+				"module": "@radix-ui/react-label",
+				"isDefault": true,
+				"asDefinition": "* as LabelPrimitive"
+			}
+		],
+		"InputProps": [
+			{
+				"name": "InputProps",
+				"path": "d:\\Internship\\product-rebrands\\components\\ui\\input.tsx",
+				"type": "interface",
+				"isDefault": false
+			}
+		],
+		"OTPInput": [
+			{
+				"name": "OTPInput",
+				"module": "input-otp",
+				"isDefault": false
+			}
+		],
+		"OTPInputContext": [
+			{
+				"name": "OTPInputContext",
+				"module": "input-otp",
+				"isDefault": false
+			}
+		],
+		"Dot": [
+			{
+				"name": "Dot",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"MenubarPrimitive": [
+			{
+				"name": "MenubarPrimitive",
+				"module": "@radix-ui/react-menubar",
+				"isDefault": true,
+				"asDefinition": "* as MenubarPrimitive"
+			}
+		],
+		"Circle": [
+			{
+				"name": "Circle",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"HoverCardPrimitive": [
+			{
+				"name": "HoverCardPrimitive",
+				"module": "@radix-ui/react-hover-card",
+				"isDefault": true,
+				"asDefinition": "* as HoverCardPrimitive"
+			}
+		],
+		"SelectPrimitive": [
+			{
+				"name": "SelectPrimitive",
+				"module": "@radix-ui/react-select",
+				"isDefault": true,
+				"asDefinition": "* as SelectPrimitive"
+			}
+		],
+		"ChevronUp": [
+			{
+				"name": "ChevronUp",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"EditProductPage": [
+			{
+				"name": "EditProductPage",
+				"path": "d:\\Internship\\product-rebrands\\app\\dashboard\\products\\[id]\\page.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"ScrollAreaPrimitive": [
+			{
+				"name": "ScrollAreaPrimitive",
+				"module": "@radix-ui/react-scroll-area",
+				"isDefault": true,
+				"asDefinition": "* as ScrollAreaPrimitive"
+			}
+		],
+		"createProduct": [
+			{
+				"name": "createProduct",
+				"module": "@/lib/models/product",
+				"isDefault": false
+			}
+		],
+		"getAllProducts": [
+			{
+				"name": "getAllProducts",
+				"module": "@/lib/models/product",
+				"isDefault": false
+			}
+		],
+		"getProductStats": [
+			{
+				"name": "getProductStats",
+				"module": "@/lib/models/product",
+				"isDefault": false
+			}
+		],
+		"multer": [
+			{
+				"name": "multer",
+				"module": "multer",
+				"isDefault": true
+			}
+		],
+		"processImage": [
+			{
+				"name": "processImage",
+				"module": "@/lib/utils",
+				"isDefault": false
+			}
+		],
+		"GripVertical": [
+			{
+				"name": "GripVertical",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"ResizablePrimitive": [
+			{
+				"name": "ResizablePrimitive",
+				"module": "react-resizable-panels",
+				"isDefault": true,
+				"asDefinition": "* as ResizablePrimitive"
+			}
+		],
+		"RadioGroupPrimitive": [
+			{
+				"name": "RadioGroupPrimitive",
+				"module": "@radix-ui/react-radio-group",
+				"isDefault": true,
+				"asDefinition": "* as RadioGroupPrimitive"
+			}
+		],
+		"ProgressPrimitive": [
+			{
+				"name": "ProgressPrimitive",
+				"module": "@radix-ui/react-progress",
+				"isDefault": true,
+				"asDefinition": "* as ProgressPrimitive"
+			}
+		],
+		"PopoverPrimitive": [
+			{
+				"name": "PopoverPrimitive",
+				"module": "@radix-ui/react-popover",
+				"isDefault": true,
+				"asDefinition": "* as PopoverPrimitive"
+			}
+		],
+		"NavigationMenuPrimitive": [
+			{
+				"name": "NavigationMenuPrimitive",
+				"module": "@radix-ui/react-navigation-menu",
+				"isDefault": true,
+				"asDefinition": "* as NavigationMenuPrimitive"
+			}
+		],
+		"Label": [
+			{
+				"name": "Label",
+				"module": "@/components/ui/label",
+				"isDefault": false
+			}
+		],
+		"DropdownMenuPrimitive": [
+			{
+				"name": "DropdownMenuPrimitive",
+				"module": "@radix-ui/react-dropdown-menu",
+				"isDefault": true,
+				"asDefinition": "* as DropdownMenuPrimitive"
+			}
+		],
+		"TextareaProps": [
+			{
+				"name": "TextareaProps",
+				"path": "d:\\Internship\\product-rebrands\\components\\ui\\textarea.tsx",
+				"type": "interface",
+				"isDefault": false
+			}
+		],
+		"TabsPrimitive": [
+			{
+				"name": "TabsPrimitive",
+				"module": "@radix-ui/react-tabs",
+				"isDefault": true,
+				"asDefinition": "* as TabsPrimitive"
+			}
+		],
+		"NewProductPage": [
+			{
+				"name": "NewProductPage",
+				"path": "d:\\Internship\\product-rebrands\\app\\dashboard\\products\\new\\page.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"SwitchPrimitives": [
+			{
+				"name": "SwitchPrimitives",
+				"module": "@radix-ui/react-switch",
+				"isDefault": true,
+				"asDefinition": "* as SwitchPrimitives"
+			}
+		],
+		"Toaster as Sonner": [
+			{
+				"name": "Toaster as Sonner",
+				"module": "sonner",
+				"isDefault": false
+			}
+		],
+		"ToastPrimitives": [
+			{
+				"name": "ToastPrimitives",
+				"module": "@radix-ui/react-toast",
+				"isDefault": true,
+				"asDefinition": "* as ToastPrimitives"
+			}
+		],
+		"updateWhyChoose": [
+			{
+				"name": "updateWhyChoose",
+				"module": "@/lib/models/why-choose",
+				"isDefault": false
+			}
+		],
+		"deleteWhyChoose": [
+			{
+				"name": "deleteWhyChoose",
+				"module": "@/lib/models/why-choose",
+				"isDefault": false
+			}
+		],
+		"SliderPrimitive": [
+			{
+				"name": "SliderPrimitive",
+				"module": "@radix-ui/react-slider",
+				"isDefault": true,
+				"asDefinition": "* as SliderPrimitive"
+			}
+		],
+		"VariantProps": [
+			{
+				"name": "VariantProps",
+				"module": "class-variance-authority",
+				"isDefault": false
+			}
+		],
+		"PanelLeft": [
+			{
+				"name": "PanelLeft",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"Input": [
+			{
+				"name": "Input",
+				"module": "@/components/ui/input",
+				"isDefault": false
+			}
+		],
+		"Separator": [
+			{
+				"name": "Separator",
+				"module": "@/components/ui/separator",
+				"isDefault": false
+			}
+		],
+		"Sheet": [
+			{
+				"name": "Sheet",
+				"module": "@/components/ui/sheet",
+				"isDefault": false
+			}
+		],
+		"SheetContent": [
+			{
+				"name": "SheetContent",
+				"module": "@/components/ui/sheet",
+				"isDefault": false
+			}
+		],
+		"Skeleton": [
+			{
+				"name": "Skeleton",
+				"module": "@/components/ui/skeleton",
+				"isDefault": false
+			}
+		],
+		"SheetPrimitive": [
+			{
+				"name": "SheetPrimitive",
+				"module": "@radix-ui/react-dialog",
+				"isDefault": true,
+				"asDefinition": "* as SheetPrimitive"
+			}
+		],
+		"SeparatorPrimitive": [
+			{
+				"name": "SeparatorPrimitive",
+				"module": "@radix-ui/react-separator",
+				"isDefault": true,
+				"asDefinition": "* as SeparatorPrimitive"
+			}
+		],
+		"Drawer as DrawerPrimitive": [
+			{
+				"name": "Drawer as DrawerPrimitive",
+				"module": "vaul",
+				"isDefault": false
+			}
+		],
+		"DialogPrimitive": [
+			{
+				"name": "DialogPrimitive",
+				"module": "@radix-ui/react-dialog",
+				"isDefault": true,
+				"asDefinition": "* as DialogPrimitive"
+			}
+		],
+		"ContextMenuPrimitive": [
+			{
+				"name": "ContextMenuPrimitive",
+				"module": "@radix-ui/react-context-menu",
+				"isDefault": true,
+				"asDefinition": "* as ContextMenuPrimitive"
+			}
+		],
+		"type DialogProps": [
+			{
+				"name": "type DialogProps",
+				"module": "@radix-ui/react-dialog",
+				"isDefault": false
+			}
+		],
+		"Command as CommandPrimitive": [
+			{
+				"name": "Command as CommandPrimitive",
+				"module": "cmdk",
+				"isDefault": false
+			}
+		],
+		"Search": [
+			{
+				"name": "Search",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"Dialog": [
+			{
+				"name": "Dialog",
+				"module": "@/components/ui/dialog",
+				"isDefault": false
+			}
+		],
+		"DialogContent": [
+			{
+				"name": "DialogContent",
+				"module": "@/components/ui/dialog",
+				"isDefault": false
+			}
+		],
+		"CollapsiblePrimitive": [
+			{
+				"name": "CollapsiblePrimitive",
+				"module": "@radix-ui/react-collapsible",
+				"isDefault": true,
+				"asDefinition": "* as CollapsiblePrimitive"
+			}
+		],
+		"TooltipPrimitive": [
+			{
+				"name": "TooltipPrimitive",
+				"module": "@radix-ui/react-tooltip",
+				"isDefault": true,
+				"asDefinition": "* as TooltipPrimitive"
+			}
+		],
+		"getProductTheme": [
+			{
+				"name": "getProductTheme",
+				"module": "@/lib/models/theme",
+				"isDefault": false
+			}
+		],
+		"upsertProductTheme": [
+			{
+				"name": "upsertProductTheme",
+				"module": "@/lib/models/theme",
+				"isDefault": false
+			}
+		],
+		"deleteProductTheme": [
+			{
+				"name": "deleteProductTheme",
+				"module": "@/lib/models/theme",
+				"isDefault": false
+			}
+		],
+		"updateIngredient": [
+			{
+				"name": "updateIngredient",
+				"module": "@/lib/models/ingredient",
+				"isDefault": false
+			}
+		],
+		"deleteIngredient": [
+			{
+				"name": "deleteIngredient",
+				"module": "@/lib/models/ingredient",
+				"isDefault": false
+			}
+		],
+		"addWhyChoose": [
+			{
+				"name": "addWhyChoose",
+				"module": "@/lib/models/why-choose",
+				"isDefault": false
+			}
+		],
+		"getWhyChooseByProductId": [
+			{
+				"name": "getWhyChooseByProductId",
+				"module": "@/lib/models/why-choose",
+				"isDefault": false
+			}
+		],
+		"deleteWhyChooseByProductId": [
+			{
+				"name": "deleteWhyChooseByProductId",
+				"module": "@/lib/models/why-choose",
+				"isDefault": false
+			}
+		],
+		"ThemeCustomizer": [
+			{
+				"name": "ThemeCustomizer",
+				"path": "d:\\Internship\\product-rebrands\\app\\dashboard\\products\\components\\theme-customizer.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"Textarea": [
+			{
+				"name": "Textarea",
+				"module": "@/components/ui/textarea",
+				"isDefault": false
+			}
+		],
+		"Palette": [
+			{
+				"name": "Palette",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"RotateCcw": [
+			{
+				"name": "RotateCcw",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"type { ProductTheme": [
+			{
+				"name": "type { ProductTheme",
+				"module": "@/lib/models/theme",
+				"isDefault": true
+			}
+		],
+		"ProductForm": [
+			{
+				"name": "ProductForm",
+				"path": "d:\\Internship\\product-rebrands\\app\\dashboard\\products\\components\\product-form.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"CardFooter": [
+			{
+				"name": "CardFooter",
+				"module": "@/components/ui/card",
+				"isDefault": false
+			}
+		],
+		"Plus": [
+			{
+				"name": "Plus",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"Trash2": [
+			{
+				"name": "Trash2",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"Save": [
+			{
+				"name": "Save",
+				"module": "lucide-react",
+				"isDefault": false
+			}
+		],
+		"TogglePrimitive": [
+			{
+				"name": "TogglePrimitive",
+				"module": "@radix-ui/react-toggle",
+				"isDefault": true,
+				"asDefinition": "* as TogglePrimitive"
+			}
+		],
+		"updateProduct": [
+			{
+				"name": "updateProduct",
+				"module": "@/lib/models/product",
+				"isDefault": false
+			}
+		],
+		"deleteProduct": [
+			{
+				"name": "deleteProduct",
+				"module": "@/lib/models/product",
+				"isDefault": false
+			}
+		],
+		"ToggleGroupPrimitive": [
+			{
+				"name": "ToggleGroupPrimitive",
+				"module": "@radix-ui/react-toggle-group",
+				"isDefault": true,
+				"asDefinition": "* as ToggleGroupPrimitive"
+			}
+		],
+		"toggleVariants": [
+			{
+				"name": "toggleVariants",
+				"module": "@/components/ui/toggle",
+				"isDefault": false
+			}
+		],
+		"Toaster": [
+			{
+				"name": "Toaster",
+				"path": "d:\\Internship\\product-rebrands\\components\\ui\\toaster.tsx",
+				"type": "function",
+				"isDefault": false
+			}
+		],
+		"useToast": [
+			{
+				"name": "useToast",
+				"module": "@/hooks/use-toast",
+				"isDefault": false
+			}
+		],
+		"addIngredient": [
+			{
+				"name": "addIngredient",
+				"module": "@/lib/models/ingredient",
+				"isDefault": false
+			}
+		],
+		"getIngredientsByProductId": [
+			{
+				"name": "getIngredientsByProductId",
+				"module": "@/lib/models/ingredient",
+				"isDefault": false
+			}
+		],
+		"deleteIngredientsByProductId": [
+			{
+				"name": "deleteIngredientsByProductId",
+				"module": "@/lib/models/ingredient",
+				"isDefault": false
+			}
+		],
+		"TermsOfService": [
+			{
+				"name": "TermsOfService",
+				"path": "d:\\Internship\\product-rebrands\\app\\terms-of-service\\page.tsx",
+				"type": "function",
+				"isDefault": true
+			}
+		],
+		"type { ResolvingMetadata": [
+			{
+				"name": "type { ResolvingMetadata",
+				"module": "next/dist/lib/metadata/types/metadata-interface.js",
+				"isDefault": true
+			}
+		],
+		"ResolvingViewport": [
+			{
+				"name": "ResolvingViewport",
+				"module": "next/dist/lib/metadata/types/metadata-interface.js",
+				"isDefault": true
+			}
+		],
+		"PageProps": [
+			{
+				"name": "PageProps",
+				"path": "d:\\Internship\\product-rebrands\\.next\\types\\app\\layout.ts",
+				"type": "interface",
+				"isDefault": false
+			}
+		],
+		"LayoutProps": [
+			{
+				"name": "LayoutProps",
+				"path": "d:\\Internship\\product-rebrands\\.next\\types\\app\\layout.ts",
+				"type": "interface",
+				"isDefault": false
+			}
+		],
+		"unstable_cacheLife": [
+			{
+				"name": "unstable_cacheLife",
+				"path": "d:\\Internship\\product-rebrands\\.next\\types\\cache-life.d.ts",
+				"type": "function",
+				"isDefault": false
+			}
+		]
+	}
+}
