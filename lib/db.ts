@@ -8,7 +8,7 @@ const pool = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
-  port: process.env.DB_PORT ? parseInt(process.env.DB_PORT) : 3307,
+  port: process.env.DB_PORT ? parseInt(process.env.DB_PORT) : 3306,
   database: process.env.DB_NAME,
   waitForConnections: true,
   connectionLimit: 10,
@@ -19,6 +19,15 @@ const pool = mysql.createPool({
   multipleStatements: true,
   dateStrings: true,
   timezone: "Z",
+  // Add authentication plugin support
+  authPlugins: {
+    mysql_native_password: () => () => Buffer.alloc(0),
+    caching_sha2_password: () => () => Buffer.alloc(0),
+  },
+  // Enable SSL for better compatibility with cloud databases
+  ssl: process.env.DB_SSL === 'false' ? false : {
+    rejectUnauthorized: false
+  }
 });
 
 // Test the connection with more detailed error handling
@@ -26,7 +35,7 @@ console.log("Database connection configuration:", {
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   database: process.env.DB_NAME,
-  port: process.env.DB_PORT || 3307,
+  port: process.env.DB_PORT || 3306,
   hasPassword: !!process.env.DB_PASSWORD,
 });
 
@@ -64,7 +73,7 @@ pool
       host: process.env.DB_HOST,
       user: process.env.DB_USER,
       database: process.env.DB_NAME,
-      port: process.env.DB_PORT || 3307,
+      port: process.env.DB_PORT || 3306,
     });
 
     // Additional error information
@@ -78,7 +87,7 @@ pool
       );
       console.error("Trying to connect to:", {
         host: process.env.DB_HOST,
-        port: process.env.DB_PORT || 3307,
+        port: process.env.DB_PORT || 3306,
         timeout: "30 seconds",
       });
       console.error("Possible solutions:");
